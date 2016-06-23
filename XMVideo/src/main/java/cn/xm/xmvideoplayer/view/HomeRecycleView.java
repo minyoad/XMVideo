@@ -53,8 +53,10 @@ public class HomeRecycleView implements RecyclerArrayAdapter.OnLoadMoreListener,
         final View view = activity.getLayoutInflater().inflate(R.layout.incd_content_recycleview, null);
         EasyRecyclerView mrecyclerView = ButterKnife.findById(view, R.id.recycler_view);
         //
-        GridLayoutManager gridLayoutManager = new GridLayoutManager(activity, 3);
-        gridLayoutManager.setSpanSizeLookup(mAdapter.obtainGridSpanSizeLookUp(3));
+        GridLayoutManager gridLayoutManager = new GridLayoutManager(activity, 4);
+        gridLayoutManager.setSpanSizeLookup(mAdapter.obtainGridSpanSizeLookUp(4));
+
+//        gridLayoutManager.setOrientation(LinearLayoutManager.HORIZONTAL);
         mrecyclerView.setLayoutManager(gridLayoutManager);
         mrecyclerView.setAdapterWithProgress(mAdapter);
         //
